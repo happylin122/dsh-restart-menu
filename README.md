@@ -19,7 +19,18 @@
 ## 安装
 
 - 在 DSH 插件市场里搜索 `dsh-restart-menu` 安装；或
-- 在 profile 里安装：`dsh plugin add dsh-restart-menu`。
+- 在 profile 里安装：`dsh plugin add dsh-restart-menu`；或
+- 用本包自带的索引手动添加来源（见下）。
+
+### 用自带索引添加来源
+
+包内 `market/index.json` 就是一份合法的市场索引（format 1，只含本插件），发布到 npm 后可以直接当作市场来源：
+
+```
+https://registry.npmmirror.com/dsh-restart-menu/0.1.0/files/market/index.json
+```
+
+在市场里「添加插件索引」填入这个地址，就能看到并安装本插件。这样上架不依赖任何 GitHub 仓库。
 
 **首次生效需要重启一次应用**（装完插件后 DSH 还没加载它，这是所有插件的共同限制）。
 
