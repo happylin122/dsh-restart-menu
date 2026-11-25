@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "happylin122",
-  "icon": "assets/icon.svg",
+  "icon": "assets/icon-180.png",
   "homepage": "https://github.com/happylin122/dsh-restart-menu",
   "repository": {
     "type": "git",
