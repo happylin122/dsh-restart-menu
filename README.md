@@ -24,13 +24,15 @@
 
 ### 用自带索引添加来源
 
-包内 `market/index.json` 就是一份合法的市场索引（format 1，只含本插件），发布到 npm 后可以直接当作市场来源：
+包内 `market/index.json` 是一份合法的市场索引（format 1，只含本插件）。它随包发布到 npm，可以直接当作「插件索引」来源：
 
 ```
-https://registry.npmmirror.com/dsh-restart-menu/0.1.0/files/market/index.json
+https://unpkg.com/dsh-restart-menu/market/index.json
 ```
 
-在市场里「添加插件索引」填入这个地址，就能看到并安装本插件。这样上架不依赖任何 GitHub 仓库。
+打开 DSH 的插件市场 → 在索引来源里「添加插件索引」→ 粘贴上面的地址 → 刷新，就能看到本插件的卡片并一键安装。这个地址始终指向最新版本；想锁定版本就写成 `https://unpkg.com/dsh-restart-menu@0.1.1/market/index.json`。
+
+这样上架不依赖任何 GitHub 仓库。
 
 **首次生效需要重启一次应用**（装完插件后 DSH 还没加载它，这是所有插件的共同限制）。
 
