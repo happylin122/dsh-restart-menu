@@ -1,0 +1,13 @@
+# ============================================================================
+# dsh-restart-menu 的 bundle patch
+#
+# 安装后 DSH 启动时会把这一层叠进配置树，从而加载本插件：
+#   - id 全局唯一，与包名一致（商城上架契约按它比对 entryIds）
+#   - name 解析到包入口 lib/index.js（Host 半侧）
+#   - package.json 里的 dsh.client 会让模块系统额外把本包扫成「浏览器插件」，
+#     页面按 /plugins/dsh-restart-menu/client.js 取到 Client 半侧
+# ============================================================================
+
+- insert:
+    - id: dsh-restart-menu
+      name: 'dsh-restart-menu'

@@ -1,0 +1,71 @@
+{
+  "name": "dsh-restart-menu",
+  "version": "0.1.0",
+  "description": "在 DeepSeek Harness 桌面版左上角「应用 / 编辑」旁加一枚「重启」按钮，一键重启整个应用，免去关窗、找托盘、重新打开的麻烦。",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "happylin122",
+  "icon": "assets/icon.svg",
+  "homepage": "https://github.com/happylin122/dsh-restart-menu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happylin122/dsh-restart-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/happylin122/dsh-restart-menu/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "restart",
+    "relaunch",
+    "desktop",
+    "menu",
+    "titlebar"
+  ],
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node scripts/check-bundle.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.3": "compatible",
+        "0.2.2-alpha.2": "compatible",
+        "0.2.2-rc.1": "compatible"
+      }
+    }
+  }
+}
