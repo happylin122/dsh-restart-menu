@@ -4,7 +4,7 @@
 
 点一下，整个应用会自动关掉并重新打开 —— 不用再点「退出」、不用再去右下角托盘里彻底结束进程、也不用回桌面重新双击图标。
 
-![标题栏上的「重启」按钮](https://raw.githubusercontent.com/happylin122/dsh-restart-menu/main/assets/screenshot.png)
+![标题栏上的「重启」按钮](https://unpkg.com/dsh-restart-menu/assets/screenshot.png)
 
 > 截图里 `应用 / 编辑 / 重启` 三个按钮并排：前两个是 DSH 原生的，第三个「重启」由本插件注入，样式、悬停、点击手感和原生完全一致。
 
